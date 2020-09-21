@@ -1,46 +1,43 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class PalletMover : ManejoPallets {
+
 
     public MoveType miInput;
     public enum MoveType {
         WASD,
         Arrows
     }
+    public Slider slider;
 
     public ManejoPallets Desde, Hasta;
     bool segundoCompleto = false;
 
     private void Update() {
-        switch (miInput) {
-            case MoveType.WASD:
-                if (!Tenencia() && Desde.Tenencia() && Input.GetKeyDown(KeyCode.A)) {
+        slider.gameObject.SetActive(true);
+
+        if (!Tenencia() && Desde.Tenencia() && slider.value > 0f&& slider.value<0.45f) {
                     PrimerPaso();
                 }
-                if (Tenencia() && Input.GetKeyDown(KeyCode.S)) {
+                if (Tenencia() && slider.value > 0.45f&&slider.value<1f) {
                     SegundoPaso();
                 }
-                if (segundoCompleto && Tenencia() && Input.GetKeyDown(KeyCode.D)) {
+                if (segundoCompleto && Tenencia() && slider.value==1) {
                     TercerPaso();
                 }
-                break;
-            case MoveType.Arrows:
-                if (!Tenencia() && Desde.Tenencia() && Input.GetKeyDown(KeyCode.LeftArrow)) {
-                    PrimerPaso();
-                }
-                if (Tenencia() && Input.GetKeyDown(KeyCode.DownArrow)) {
-                    SegundoPaso();
-                }
-                if (segundoCompleto && Tenencia() && Input.GetKeyDown(KeyCode.RightArrow)) {
-                    TercerPaso();
-                }
-                break;
-            default:
-                break;
-        }
+
+
     }
+
+    /*public void hacerTodoXD(){
+        PrimerPaso();
+        SegundoPaso();
+        TercerPaso();
+    }*/
 
     void PrimerPaso() {
         Desde.Dar(this);
@@ -50,9 +47,10 @@ public class PalletMover : ManejoPallets {
         base.Pallets[0].transform.position = transform.position;
         segundoCompleto = true;
     }
-    void TercerPaso() {
+    public void TercerPaso() {
         Dar(Hasta);
         segundoCompleto = false;
+        slider.gameObject.SetActive(false);
     }
 
     public override void Dar(ManejoPallets receptor) {
