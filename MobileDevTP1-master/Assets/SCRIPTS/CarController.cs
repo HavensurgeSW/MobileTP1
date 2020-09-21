@@ -11,6 +11,9 @@ public class CarController : MonoBehaviour {
     float giro = 0f;
     float acel = 1f;
 
+    [SerializeField]string input;
+
+
     // Use this for initialization
     void Start () {
 		
@@ -23,7 +26,7 @@ public class CarController : MonoBehaviour {
             wheel.motorTorque = throttleCoefficient * T.GetFDT() * acel;
         }
         foreach (var wheel in steeringWheels) {
-            wheel.steerAngle = maxTurn * giro;
+            wheel.steerAngle = maxTurn * InputManager.Instance.GetAxis(input);
         }
         giro = 0f;
     }
