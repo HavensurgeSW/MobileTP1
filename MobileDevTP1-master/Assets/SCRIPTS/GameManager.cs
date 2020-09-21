@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
 	public float TiempoDeJuego = 60;
 	
 	public enum EstadoJuego{Calibrando, Jugando, Finalizado}
-	public EstadoJuego EstAct = EstadoJuego.Calibrando;
+	public EstadoJuego EstAct = EstadoJuego.Jugando;
 	
 	public PlayerInfo PlayerInfo1 = null;
 	public PlayerInfo PlayerInfo2 = null;
@@ -77,7 +77,8 @@ public class GameManager : MonoBehaviour
 	
 	void Start()
 	{
-		IniciarCalibracion();
+		//IniciarCalibracion();
+		EmpezarCarrera();
 		
 		//para testing
 		//PosCamionesCarrera[0].x+=100;
@@ -105,7 +106,7 @@ public class GameManager : MonoBehaviour
 		case EstadoJuego.Calibrando:
 			
 			//SKIP EL TUTORIAL
-			if(Input.GetKey(KeyCode.Mouse0) &&
+			/*if(Input.GetKey(KeyCode.Mouse0) &&
 			   Input.GetKey(KeyCode.Keypad0))
 			{
 				if(PlayerInfo1 != null && PlayerInfo2 != null)
@@ -129,6 +130,7 @@ public class GameManager : MonoBehaviour
                     PlayerInfo2.LadoAct = Visualizacion.Lado.Der;
                     SetPosicion(PlayerInfo2);
                 }
+			*/	
 			
 			//cuando los 2 pj terminaron los tutoriales empiesa la carrera
 			if(PlayerInfo1.PJ != null && PlayerInfo2.PJ != null)
@@ -538,9 +540,9 @@ public class GameManager : MonoBehaviour
 			PJ = pj;
 		}
 		
-		public bool FinCalibrado = false;
-		public bool FinTuto1 = false;
-		public bool FinTuto2 = false;
+		public bool FinCalibrado = true;
+		public bool FinTuto1 = true;
+		public bool FinTuto2 = true;
 		
 		public Visualizacion.Lado LadoAct;
 
