@@ -116219,7 +116219,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4827866222774608, guid: b81b1a58a0f14c9439cbdd014e695f71, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -17.42
+      value: -4.56
       objectReference: {fileID: 0}
     - target: {fileID: 4827866222774608, guid: b81b1a58a0f14c9439cbdd014e695f71, type: 3}
       propertyPath: m_LocalPosition.y
@@ -116446,7 +116446,7 @@ GameObject:
   - component: {fileID: 229621378}
   - component: {fileID: 229621377}
   m_Layer: 5
-  m_Name: CONTROLLERS LA CONCHA DE MI MADRE
+  m_Name: Joysticks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -116688,7 +116688,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -116743,7 +116743,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &471532732
 RectTransform:
   m_ObjectHideFlags: 0
@@ -116763,7 +116763,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -612, y: 357}
+  m_AnchoredPosition: {x: -612, y: 275.00003}
   m_SizeDelta: {x: 480, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &471532733
@@ -116898,7 +116898,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4827866222774608, guid: b81b1a58a0f14c9439cbdd014e695f71, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.77
+      value: -15.67
       objectReference: {fileID: 0}
     - target: {fileID: 4827866222774608, guid: b81b1a58a0f14c9439cbdd014e695f71, type: 3}
       propertyPath: m_LocalPosition.y
@@ -117029,7 +117029,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -117101,7 +117101,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -117353,7 +117353,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -117414,7 +117414,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1458433091
 RectTransform:
   m_ObjectHideFlags: 0
@@ -117434,7 +117434,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 615, y: 357}
+  m_AnchoredPosition: {x: 615, y: 275}
   m_SizeDelta: {x: 480, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1458433092
@@ -117520,7 +117520,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 786, y: -366}
+  m_AnchoredPosition: {x: 918, y: -379}
   m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1548311017
@@ -117731,7 +117731,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -741, y: -379}
+  m_AnchoredPosition: {x: -871, y: -379}
   m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1895918383
