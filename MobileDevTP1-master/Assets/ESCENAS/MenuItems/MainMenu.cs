@@ -5,23 +5,38 @@ using UnityEngine.SceneManagement;
 
 
 public class MainMenu : MonoBehaviour{
+   
+   bool coop  = true;
 
-    [SerializeField] GameObject creditsPopUp = null;
+   public void startGame(){
+       if (coop){
+           PlayGame();
+       }else
+         playGameSolo();
+   }
 
-    public void PlayGame(){
+   public void setCoop(){
+       coop = true;
+   }
+    public void setSP(){
+       coop = false;
+   }
+
+    void PlayGame(){
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
+    }
 
+    void playGameSolo(){
+        SceneManager.LoadScene(3);
     }
 
     public void QuitGame(){
         Application.Quit();
     }
-    public Animator anim;
-    
-    public void CreditsToggle(){
-        creditsPopUp.SetActive(true);
-        anim = GetComponent<Animator>();
-        anim.Play("HelpPopUp");
-    }
 
+    public float speed = 70f;
+    void Update() {
+        transform.Rotate(0,speed*Time.deltaTime,0);
+    }
+    
 }

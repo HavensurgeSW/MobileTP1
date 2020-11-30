@@ -12,6 +12,7 @@ public class PalletMover : ManejoPallets {
         WASD,
         Arrows
     }
+    
     public Slider slider;
 
     public ManejoPallets Desde, Hasta;
@@ -20,15 +21,31 @@ public class PalletMover : ManejoPallets {
     private void Update() {
         slider.gameObject.SetActive(true);
 
-        if (!Tenencia() && Desde.Tenencia() && slider.value > 0f&& slider.value<0.45f) {
+
+        switch(miInput){
+            case MoveType.WASD:
+                if (!Tenencia() && Desde.Tenencia() && slider.value > 0f&& slider.value<0.45f||Input.GetKeyDown("a")) {
                     PrimerPaso();
                 }
-                if (Tenencia() && slider.value > 0.45f&&slider.value<1f) {
+                if (Tenencia() && slider.value > 0.45f&&slider.value<1f||Input.GetKeyDown("w")) {
                     SegundoPaso();
                 }
-                if (segundoCompleto && Tenencia() && slider.value==1) {
+                if (segundoCompleto && Tenencia() && slider.value==1||Input.GetKeyDown("d")) {
                     TercerPaso();
                 }
+                break;
+            case MoveType.Arrows:
+            if (!Tenencia() && Desde.Tenencia() && slider.value > 0f&& slider.value<0.45f||Input.GetKeyDown("left")) {
+                    PrimerPaso();
+                }
+                if (Tenencia() && slider.value > 0.45f&&slider.value<1f||Input.GetKeyDown("up")) {
+                    SegundoPaso();
+                }
+                if (segundoCompleto && Tenencia() && slider.value==1||Input.GetKeyDown("right")) {
+                    TercerPaso();
+                }
+                break;
+        }
 
 
     }

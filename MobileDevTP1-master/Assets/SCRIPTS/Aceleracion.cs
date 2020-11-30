@@ -45,6 +45,8 @@ public class Aceleracion : MonoBehaviour
 		//acelerar
 		if(DifDer > 0)
 		{
+
+			Debug.Log("Dale man");
 			Acelerado = DifDer * SensAcel * Time.deltaTime;
 			
 			Camion.position += Acelerado * Camion.forward;

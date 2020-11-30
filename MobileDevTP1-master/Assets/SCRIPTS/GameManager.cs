@@ -17,7 +17,7 @@ public class GameManager : MonoBehaviour
 	
 	public Player Player1;
 	public Player Player2;
-	
+
 	//mueve los esqueletos para usar siempre los mismos
 	public Transform Esqueleto1;
 	public Transform Esqueleto2;
@@ -70,9 +70,8 @@ public class GameManager : MonoBehaviour
 	
 	//--------------------------------------------------------//
 	
-	void Awake()
-	{
-		GameManager.Instancia = this;
+	void Awake(){
+
 	}
 	
 	void Start()
@@ -106,7 +105,7 @@ public class GameManager : MonoBehaviour
 		case EstadoJuego.Calibrando:
 			
 			//SKIP EL TUTORIAL
-			/*if(Input.GetKey(KeyCode.Mouse0) &&
+			if(Input.GetKey(KeyCode.Mouse0) &&
 			   Input.GetKey(KeyCode.Keypad0))
 			{
 				if(PlayerInfo1 != null && PlayerInfo2 != null)
@@ -130,7 +129,7 @@ public class GameManager : MonoBehaviour
                     PlayerInfo2.LadoAct = Visualizacion.Lado.Der;
                     SetPosicion(PlayerInfo2);
                 }
-			*/	
+			
 			
 			//cuando los 2 pj terminaron los tutoriales empiesa la carrera
 			if(PlayerInfo1.PJ != null && PlayerInfo2.PJ != null)
@@ -320,7 +319,7 @@ public class GameManager : MonoBehaviour
 		Player2.GetComponent<Frenado>().Frenar();
 		Player2.gameObject.transform.position = PosCamion2Tuto;
 		Player2.CambiarATutorial();
-		Player2.transform.forward = Vector3 .forward;
+		Player2.transform.forward = Vector3.forward;
 	}
 	
 	void EmpezarCarrera()
@@ -492,6 +491,8 @@ public class GameManager : MonoBehaviour
 		Player2.transform.forward = Vector3.forward;
 		
 		EstAct = GameManager.EstadoJuego.Jugando;
+
+		
 	}
 	
 	public void FinTutorial(int playerID)

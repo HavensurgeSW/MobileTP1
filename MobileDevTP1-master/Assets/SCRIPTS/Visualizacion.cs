@@ -225,8 +225,8 @@ public class Visualizacion : MonoBehaviour
 			//el fondo
 			GUI.skin = GS_FondoFondoBonusColor;
 			
-			R.width = ColorFondoFondoEsc.x *Screen.width /100;
-			R.height = ColorFondoFondoEsc.y *Screen.height /100;
+			R.width = ColorFondoFondoEsc.x *Screen.width ;
+			R.height = ColorFondoFondoEsc.y *Screen.height ;
 			R.x = ColorFondoFondoPos.x *Screen.width /100;
 			R.y = ColorFondoFondoPos.y *Screen.height /100;
 			if(LadoAct == Visualizacion.Lado.Der)
@@ -263,8 +263,8 @@ public class Visualizacion : MonoBehaviour
 	{
 		GUI.skin = GS_Din;
 		
-		R.width = DinEsc.x *Screen.width /100;
-		R.height = DinEsc.y *Screen.height /100;
+		R.width = DinEsc.x *Screen.width;
+		R.height = DinEsc.y *Screen.height;
 		R.x = DinPos[0].x *Screen.width /100;
 		R.y = DinPos[0].y *Screen.height /100;
 		if(LadoAct == Visualizacion.Lado.Der)
@@ -414,8 +414,8 @@ public class Visualizacion : MonoBehaviour
 	{
 		GUI.skin = GS_Inv;
 		
-		R.width = FondoEsc.x * Screen.width /100;
-		R.height = FondoEsc.y * Screen.width /100;
+		R.width = FondoEsc.x * Screen.width ;
+		R.height = FondoEsc.y * Screen.width ;
 		R.x = FondoPos[0].x * Screen.width /100;
 		R.y = FondoPos[0].y * Screen.height /100;
 		
