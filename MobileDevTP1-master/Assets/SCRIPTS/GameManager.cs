@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -205,7 +206,7 @@ public class GameManager : MonoBehaviour
 			
 			TiempEspMuestraPts -= Time.deltaTime;
 			if(TiempEspMuestraPts <= 0)
-				Application.LoadLevel(Application.loadedLevel +1);				
+				SceneManager.LoadScene(2);			
 			
 			break;		
 		}

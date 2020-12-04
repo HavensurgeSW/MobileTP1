@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 /// <summary>
 /// clase encargada de TODA la visualizacion
@@ -10,6 +11,7 @@ public class Visualizacion : MonoBehaviour
 {
 	public enum Lado{Izq, Der}
 	public Lado LadoAct;
+
 	
 	ControlDireccion Direccion;
 	Player Pj;
@@ -94,7 +96,7 @@ public class Visualizacion : MonoBehaviour
 	Rect R;
 	
 	//------------------------------------------------------------------//
-	
+	[SerializeField]Text scoreHUD;
 	// Use this for initialization
 	void Start () 
 	{
@@ -104,9 +106,9 @@ public class Visualizacion : MonoBehaviour
 	}
 	
 	// Update is called once per frame
-	void Update () 
-	{
-		
+	void Update () {
+		Debug.Log(Pj.Dinero);
+		scoreHUD.text = Pj.Dinero.ToString();
 	}
 	
 	void OnGUI()
@@ -261,16 +263,17 @@ public class Visualizacion : MonoBehaviour
 	
 	void SetDinero()
 	{
-		GUI.skin = GS_Din;
+		/*GUI.skin = GS_Din;
 		
 		R.width = DinEsc.x *Screen.width;
 		R.height = DinEsc.y *Screen.height;
 		R.x = DinPos[0].x *Screen.width /100;
 		R.y = DinPos[0].y *Screen.height /100;
 		if(LadoAct == Visualizacion.Lado.Der)
-			R.x = DinPos[1].x *Screen.width /100;
+			R.x = DinPos[1].x *Screen.width ;
 			//R.x = (Screen.width) - (Screen.width/2) - R.x;
 		GUI.Box(R, "$" + PrepararNumeros(Pj.Dinero));
+		*/
 	}
 	
 	void SetCalibr()
